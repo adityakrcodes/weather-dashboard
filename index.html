@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="cityInput">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div id="loadingMessage" class="loading">Loading...</div>
+        <div class="weather-info" id="weatherInfo">
+            <div class="city" id="cityName"></div>
+            <img class="weather-icon" id="weatherIcon" src="" alt="Weather Icon" style="display: none;">
+            <div class="temperature" id="temperature"></div>
+            <div class="description" id="description"></div>
+            <div class="details">
+                <div class="detail-item">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="windSpeed"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Feels Like</div>
+                    <div class="detail-value" id="feelsLike"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value" id="pressure"></div>
+                </div>
+            </div>
+        </div>
+        <div class="search-history" id="searchHistory">
+            <div class="history-title">
+                <h3>Search History</h3>
+                <button class="clear-history" onclick="clearHistory()">Clear History</button>
+            </div>
+            <div class="history-items" id="historyItems"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
